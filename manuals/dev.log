@@ -11,6 +11,7 @@ route -p add 175.28.231.0  mask  255.255.255.0   175.28.239.254   METRIC 1 IF 20
 
 
 ==== Unix commands
+crl + R                     -- search for a previous command
 ls -la                       -- list file in directory
 cp <from> <to>               -- copy file
 mv <from> <to>               -- move file
@@ -25,12 +26,24 @@ chflags -R nouchg <path>     -- unlock files
 
 ==== SSH commands
 ssh -vvv <user>@<host>:<port>     -- connect
+ps aux | grep gradle              -- list gradle processes
+kill -9 <gradle pid>              -- kill gradle process by pid
+gitlab-runner restart             -- restart CI runner
+sh  --login -i -- script.sh       -- run sh script from git bash
 
 
 ==== Brew commands
+brew list                    -- show list of packages
+brew cask list               -- show list of packages installed by Caskroom
 brew update                  -- update brew repository
 brew outdated                -- check for update packages
 brew upgrade <package>       -- update specific package
+
+
+==== Android commands
+adb devices                  -- list of connected devices
+adb install <APK>            -- install application from PC
+adb uninstall <package>      -- uninstall all with package name
 
 
 ==== Maven commands
@@ -49,7 +62,8 @@ gradle build -C rebuild      -- build all tasks applications
 gradle <task> --rerun-tasks  -- run task with applications module
 gradle <task> --continue     -- run task and continue if test fail
 gradle <task> -x <task>      -- run task without subtask
-gradle <task> --parallel     -- run task in paraller mode
+gradle <task> --parallel     -- run task in parallel mode
+gradle install               -- publish artefact to local repository
 gradle eclipse               -- build eclipse workspace
 gradle cleanEclipse          -- cleans all Eclipse files
 gradle dependencies          -- dependency tree for gradle project
@@ -63,7 +77,7 @@ git init --bare                 -- create a new server repository
 
 git branch                      -- show my local branch
 git branch <branch>             -- create new branch
-git branch -D <branch>          -- delet current branch
+git branch -D <branch>          -- delete current branch
 git branch -r                   -- show all remote branches
 git branch -vv                  -- show branch with remote
 
@@ -82,9 +96,11 @@ git commit --amend              -- commit to last commit
 git reset <file>                -- undo git add action file
 git reset --hard <commit>       -- reset branch to commit mark
 git reset --hard HEAD           -- revert changes without commit
+git reset --soft HEAD~1         -- revert last commit
 
 git add <file name>             -- add file to commit list
 git fetch                       -- check if changes on remote branches are available
+git fetch -p                    -- update information about all remote branch
 git pull                        -- get changes from remote branch to local branch
 git stash                       -- stash work for later
 git stash pop                   -- get changes from stash
@@ -93,6 +109,8 @@ git push                          -- send changes from local branch to remote br
 git push <branch> --force         -- push force
 git push -u origin <branch>       -- push branch to remote
 git push origin --delete <branch> -- remove remote branch
+git push origin <tag>             -- push single tag
+git push origin --delete <tag>    -- remove tag from remote
 
 git rebase <branch>             -- update branch to changes from branch
 git rebase -i HEAD~<number>     -- squashing number of commit
@@ -101,8 +119,8 @@ git diff <sourcebr> <targetbr>  -- preview changes before merging
 git cherry-pick <branch name>   -- merge last commit from local branch to local branch
 git mergetool                   -- megre conflict tool
 
-gitk                            -- show informations
-gitk --all                      -- show all informations
+gitk                            -- show information
+gitk --all                      -- show all information
 git show                        -- show my changes
 git status                      -- show status of branch
 git log                         -- show list of changes
@@ -115,9 +133,8 @@ git branch --set-upstream-to=origin/<branch>        -- setup track a remote bran
 git checkout -b integration -t origin/integration   -- create local branch which track remote branch
 git remote show origin                              -- show remote branch
 git log --graph --oneline --all --decorate          -- show graph tree of changes
-git mv -f <file> <new name/location>                -- rename or move file with traking
+git mv -f <file> <new name/location>                -- rename or move file with tracking
 git remote -v show                                  -- show my remote repository
-sh  --login -i -- script.sh                         -- run sh script from git bash
 
 
 ==== Git configurations
@@ -136,7 +153,7 @@ fix(): changes affected single bug fix
 refactor(): changes that neither fixes a bug nor adds a feature
 style(): changes that do not affect the meaning of the code
 test(): adding missing tests or correcting existing tests
-docs(): changes affected ocumentation only
+docs(): changes affected documentation only
 
 
 ==== NPM commands
@@ -157,35 +174,78 @@ cordova platform ls                           -- show list of available platform
 cordova platform add <platform>               -- add platform to the project
 cordova plugin ls                             -- show list of added plugins
 cordova plugin add <plugin>                   -- add plugin to the project
-cordova plugin remove <plugin>                -- removeplugin from the project
+cordova plugin remove <plugin>                -- remove plugin from the project
 cordova build <platform>                      -- build application for platform
 cordova emulate <platform>                    -- run application on platform emulator
 cordova run <platform>                        -- run application on connected device
 
 
-==== Eclipse shortcuts
-Editing:
-- ctrl + D = delete line
-- ctrl + alt + I = delete selected
-- alt + up/down = move line
-- ctrl + alt + up/down = copy of line
-- alt + shift + I = create new instance 'new Class()'
+==== IntelliJ shortcuts
+General:
+- cmd + shift + A                  -- find action by name
+- alt + enter                      -- show context help
+- cmd + ,                          -- IDEA preferences
+- cmd + ;                          -- project preferences
 
-Reading:
-- ctrl + L = move to line
-- ctrl + alt + A = show annotations
-- ctrl + T = show hierarchy
-- ctrl + O = show method in object
+Navigation:
+- cmd + E                          -- show recent files
+- cmd + L                          -- move cursor to line
+- cmd + [                          -- move cursor back
+- cmd + ]                          -- move cursor forth
+- cmd + U                          -- move to super method
+- cmd + B                          -- move to declaration
+- cmd + alt + B                    -- move to implementation
+- cmd + O                          -- open class
+- cmd + shift + O                  -- open file
+- ctrl + H                         -- open hierarchy
+- ctrl + J                         -- open quick documentation
+- F2                               -- move to next error/warning
+- F3                               -- toggle bookmark
+- cmd + F3                         -- show bookmarks
+- cmd + arrow up                   -- show package path
+- cmd + F12                        -- show class structure
+- opt F1 -> 1                      -- show file in tree structure
+- opt F1 -> 8                      -- open file in file explorer
+- cmd + down                       -- move to selected file (project)
+- opt + space                      -- show method implementation
 
-Finding:
-- ctrl + shift + R = find resource
-- ctrl + shift + T = find type
-- ctrl + shift + G = find referencing to object
-- ctrl + alt + H = find hierarchy of object
-
-Debugging:
-- ctrl + shift + I = show value of selected object
+Coding:
+- cmd + N                          -- generate new code
+- cmd + J                          -- show live templates
+- cmd + P                          -- show parameters
+- cmd + D                          -- duplicate line
+- cmd + backspace                  -- remove active line
+- shift + cmd + T                  -- create test for class
+- cmd + shift + up/down            -- move block up or down
+- alt + shift + up/down            -- move line up or down
+- alt + shift + left/right         -- marked text left or right
+- cmd + shift + V                  -- paste from content
 
 Refactoring:
-- shift + alt + R = class field refactor (x2 refactor get and set)
-- shift + ctrl + F = formatting
+- ctrl + T                         -- refactor menu
+- shift + F6                       -- rename property or class
+- cmd + alt + L                    -- format code
+- cmd + alt + V                    -- extract to variable
+- cmd + alt + F                    -- extract to field
+- cmd + alt + M                    -- extract to method
+- cmd + shift + U                  -- replace to upper case
+- cmd + shift + F                  -- find in path
+- cmd + shift + R                  -- replace in path
+- alt -> alt + arrow               -- column selection
+- ctrl + G                         -- select next same phrase
+- ctrl + alt + G                   -- select all same phrase
+
+Debugging:
+- ctrl + shift + R                 -- run context configuration
+- ctrl + shift + D                 -- debug context configuration
+- cmd + alt + R                    -- run to next brake point
+- cmd + alt + F8                   -- evaluate selected code
+- cmd + F8                         -- put brake point
+- F8                               -- step down
+
+Git:
+- cmd + K                          -- show git console
+- cmd + D                          -- show diff
+- F7                               -- next change (diff)
+- cmd + F7                         -- previous change (diff)
+- cmd + alt + Z                    -- undo uncommitted changes
