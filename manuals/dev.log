@@ -1,0 +1,191 @@
+==== Win commands
+ping <IP address>               -- ping address
+tracert <IP address>            -- show trace route
+route add <network> <gateway>   -- add routing
+route print                     -- print routing table
+ipconfig /all                   -- IP configurations
+
+EXAMPLES:
+route -p add <network> mask <mask> <gateway> METRIC <number> IF <interface number>
+route -p add 175.28.231.0  mask  255.255.255.0   175.28.239.254   METRIC 1 IF 20
+
+
+==== Unix commands
+ls -la                       -- list file in directory
+cp <from> <to>               -- copy file
+mv <from> <to>               -- move file
+du <dir/*>                   -- size od directory
+mkdir <dir>                  -- create directory
+type <command>               -- show command alias or root
+zip -r <name> <dir>          -- zip directory
+unzip <name>                 -- unzip file
+zipinfo <name>               -- preview zip file
+chflags -R nouchg <path>     -- unlock files
+
+
+==== SSH commands
+ssh -vvv <user>@<host>:<port>     -- connect
+
+
+==== Brew commands
+brew update                  -- update brew repository
+brew outdated                -- check for update packages
+brew upgrade <package>       -- update specific package
+
+
+==== Maven commands
+mvn clean                    -- cleans build directory
+mvn install                  -- build applications
+mvn deploy                   -- deploy applications on machine
+mvn eclipse:eclipse          -- build eclipse workspace
+mvn dependency:tree          -- get dependency tree for project
+
+
+==== Gradle commands
+gradle tasks                 -- list of tasks
+gradle clean                 -- cleans build directory
+gradle build                 -- build applications
+gradle build -C rebuild      -- build all tasks applications
+gradle <task> --rerun-tasks  -- run task with applications module
+gradle <task> --continue     -- run task and continue if test fail
+gradle <task> -x <task>      -- run task without subtask
+gradle <task> --parallel     -- run task in paraller mode
+gradle eclipse               -- build eclipse workspace
+gradle cleanEclipse          -- cleans all Eclipse files
+gradle dependencies          -- dependency tree for gradle project
+gradle :subProject: <task>   -- start task only for sub project
+
+
+==== Git commands
+git clone <ssh/http>            -- clone project
+git init                        -- create a new local repository
+git init --bare                 -- create a new server repository
+
+git branch                      -- show my local branch
+git branch <branch>             -- create new branch
+git branch -D <branch>          -- delet current branch
+git branch -r                   -- show all remote branches
+git branch -vv                  -- show branch with remote
+
+git checkout -                  -- switch to previous branch
+git checkout -m                 -- rename branch
+git checkout <branch>           -- change current branch
+git checkout -b <branch>        -- create new branch
+git checkout <file name>        -- revert file
+git checkout HEAD~<number>      -- change number of commit before
+git checkout -- <file/dir>      -- undo changes in local files
+
+git commit -m "<text>"          -- commit changes with description
+git commit -am "<text>"         -- and commit changes with description
+git commit --amend              -- commit to last commit
+
+git reset <file>                -- undo git add action file
+git reset --hard <commit>       -- reset branch to commit mark
+git reset --hard HEAD           -- revert changes without commit
+
+git add <file name>             -- add file to commit list
+git fetch                       -- check if changes on remote branches are available
+git pull                        -- get changes from remote branch to local branch
+git stash                       -- stash work for later
+git stash pop                   -- get changes from stash
+
+git push                          -- send changes from local branch to remote branch
+git push <branch> --force         -- push force
+git push -u origin <branch>       -- push branch to remote
+git push origin --delete <branch> -- remove remote branch
+
+git rebase <branch>             -- update branch to changes from branch
+git rebase -i HEAD~<number>     -- squashing number of commit
+git merge <branch name>         -- merge changes from local branch to current branch
+git diff <sourcebr> <targetbr>  -- preview changes before merging
+git cherry-pick <branch name>   -- merge last commit from local branch to local branch
+git mergetool                   -- megre conflict tool
+
+gitk                            -- show informations
+gitk --all                      -- show all informations
+git show                        -- show my changes
+git status                      -- show status of branch
+git log                         -- show list of changes
+git reflog                      -- show list of local changes
+
+Excample:
+git branch -r | grep <name>                         -- grep remote branch by name
+git branch | grep 'GATOR-' | xargs git branch -D    -- remove branches started from 'GATOR-'
+git branch --set-upstream-to=origin/<branch>        -- setup track a remote branch
+git checkout -b integration -t origin/integration   -- create local branch which track remote branch
+git remote show origin                              -- show remote branch
+git log --graph --oneline --all --decorate          -- show graph tree of changes
+git mv -f <file> <new name/location>                -- rename or move file with traking
+git remote -v show                                  -- show my remote repository
+sh  --login -i -- script.sh                         -- run sh script from git bash
+
+
+==== Git configurations
+git config --list                             -- list of configuration
+git config --global user.name "<name>"        -- setup first name and last name
+git config --global user.email <email>        -- setup email
+git config --global push.default upstream     -- push the current branch to its upstream branch
+
+
+==== Git prefixes
+init(): initial changes for new project or repository
+build(): changes that affect the build system or external dependencies
+ci(): changes to CI configuration files and scripts
+feat(): changes affected new feature
+fix(): changes affected single bug fix
+refactor(): changes that neither fixes a bug nor adds a feature
+style(): changes that do not affect the meaning of the code
+test(): adding missing tests or correcting existing tests
+docs(): changes affected ocumentation only
+
+
+==== NPM commands
+npm search <name>                   -- search for package name
+npm view <package>                  -- view details about package
+npm list                            -- list of installed packages
+npm update                          -- update package
+npm install                         -- install local package
+npm install -g                      -- install global package
+npm uninstall                       -- uninstall local package
+npm uninstall -g                    -- uninstall global package
+
+
+==== Cordova commands
+cordova create <dir> <package> <name>         -- create new cordova project
+cordova requirements                          -- validate platform requirements
+cordova platform ls                           -- show list of available platforms
+cordova platform add <platform>               -- add platform to the project
+cordova plugin ls                             -- show list of added plugins
+cordova plugin add <plugin>                   -- add plugin to the project
+cordova plugin remove <plugin>                -- removeplugin from the project
+cordova build <platform>                      -- build application for platform
+cordova emulate <platform>                    -- run application on platform emulator
+cordova run <platform>                        -- run application on connected device
+
+
+==== Eclipse shortcuts
+Editing:
+- ctrl + D = delete line
+- ctrl + alt + I = delete selected
+- alt + up/down = move line
+- ctrl + alt + up/down = copy of line
+- alt + shift + I = create new instance 'new Class()'
+
+Reading:
+- ctrl + L = move to line
+- ctrl + alt + A = show annotations
+- ctrl + T = show hierarchy
+- ctrl + O = show method in object
+
+Finding:
+- ctrl + shift + R = find resource
+- ctrl + shift + T = find type
+- ctrl + shift + G = find referencing to object
+- ctrl + alt + H = find hierarchy of object
+
+Debugging:
+- ctrl + shift + I = show value of selected object
+
+Refactoring:
+- shift + alt + R = class field refactor (x2 refactor get and set)
+- shift + ctrl + F = formatting
