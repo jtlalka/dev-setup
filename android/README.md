@@ -5,6 +5,7 @@
 - `⌘⌥⌃ + Q` -- Close project
 - `⌘⌥⌃ + S` -- Sync Project with Gradle
 - `⌘⌥⌃ + G` -- Build (G like Gradle)
+- `⌘⌥⌃ + D` -- Attach Debug
 - `⌘⌥⌃ + R` -- Rebuild project
 - `⌘⌥⌃ + B` -- Branches...
 - `⌘⌥⌃ + A` -- Annotation
