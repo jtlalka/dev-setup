@@ -215,7 +215,9 @@ Coding:
 - cmd + P                          -- show parameters
 - cmd + D                          -- duplicate line
 - cmd + backspace                  -- remove active line
-- shift + cmd + T                  -- create test for class
+- ctrl + space                     -- auto completion
+- ctrl + shift + space             -- smart auto completion
+- cmd + shift + T                  -- create test for class
 - cmd + shift + up/down            -- move block up or down
 - alt + shift + up/down            -- move line up or down
 - alt + shift + left/right         -- marked text left or right
@@ -223,6 +225,7 @@ Coding:
 
 Refactoring:
 - ctrl + T                         -- refactor menu
+- cmd + alt + T                    -- surround with..
 - shift + F6                       -- rename property or class
 - cmd + alt + L                    -- format code
 - cmd + alt + V                    -- extract to variable
