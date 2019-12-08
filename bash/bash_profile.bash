@@ -1,6 +1,3 @@
-# ENVIRONMENTS
-# moved to: ~/Library/LaunchAgents/tlalka.environment.plist
-
 # OPTIONS
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
@@ -11,7 +8,8 @@ export PATH=${PATH}:/Users/jtlalka/Library/Android/sdk/platform-tools/
 export PATH=/usr/local/opt/openssl/bin:${PATH}
 
 # ALIASES
-alias ll="ls -laG"
+alias ll="ls -lG"
+alias la="ls -laG"
 alias cc="cd /"
 alias rmdir="rm -rdf"
 alias du="du -sh"
@@ -29,12 +27,12 @@ alias chmod444="find . -type f -exec chmod 444 {} \;"
 
 
 # GIT-PROMPT
-if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+if [[ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]]; then
     __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
     source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
 fi
 
 # GIT-COMPLETION
-if [ -f /usr/local/etc/bash_completion ]; then
+if [[ -f /usr/local/etc/bash_completion ]]; then
     source "/usr/local/etc/bash_completion"
 fi
