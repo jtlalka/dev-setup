@@ -114,9 +114,10 @@ git push origin --delete <tag>    -- remove tag from remote
 
 git rebase <branch>             -- update branch to changes from branch
 git rebase -i HEAD~<number>     -- squashing number of commit
+git rebase --onto master HEAD~1 -- change root commit from current -1 to master
 git merge <branch name>         -- merge changes from local branch to current branch
 git diff <sourcebr> <targetbr>  -- preview changes before merging
-git cherry-pick <branch name>   -- merge last commit from local branch to local branch
+git cherry-pick <commit SHA>    -- duplicate commit from another branch to current branch
 git mergetool                   -- megre conflict tool
 
 gitk                            -- show information
@@ -204,10 +205,12 @@ Navigation:
 - cmd + F3                         -- show bookmarks
 - cmd + arrow up                   -- show package path
 - cmd + F12                        -- show class structure
-- opt F1 -> 1                      -- show file in tree structure
-- opt F1 -> 8                      -- open file in file explorer
+- alt F1 -> 1                      -- show file in tree structure
+- alt F1 -> 8                      -- open file in file explorer
 - cmd + down                       -- move to selected file (project)
-- opt + space                      -- show method implementation
+- alt + space                      -- show method implementation
+- ctrl + alt + up/down             -- next/previous highlight usages
+- ctrl + shift + up/down           -- next/previous method in class
 
 Coding:
 - cmd + N                          -- generate new code
