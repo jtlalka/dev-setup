@@ -1,17 +1,17 @@
 #
-# Nexus IQ Gradle Plugin
+# DevSetup
 #
 
-# Android
-/local.properties
-
-# Android Studio
+# Idea IDE
 .idea/
 *.iml
 
-# Gradle
-/**/build/
-.gradle
-
-# OS
+# Mac OS
 .DS_Store
+
+# Unix OS
+*~
+
+# Windows OS
+Thumbs.db
+Desktop.ini

@@ -3,9 +3,8 @@ export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 # PATH
-export PATH=${PATH}:/Users/jtlalka/Library/Android/sdk/tools/
-export PATH=${PATH}:/Users/jtlalka/Library/Android/sdk/platform-tools/
-export PATH=/usr/local/opt/openssl/bin:${PATH}
+export PATH="${PATH}:/Users/jtlalka/Library/Android/sdk/tools/"
+export PATH="${PATH}:/Users/jtlalka/Library/Android/sdk/platform-tools/"
 
 # ALIASES
 alias ll="ls -lG"
@@ -15,16 +14,15 @@ alias rmdir="rm -rdf"
 alias du="du -sh"
 
 alias gk="gitk --all"
+alias gs="git status -s"
 alias gb="git checkout -b"
-alias gp="git pull"
-alias ga="git add ."
-alias gs="git status"
 alias gf="git fetch -p"
+alias ga="git add ."
+alias gp="git pull"
 
+alias chmod444="find . -type f -exec chmod 444 {} \;"
 alias chmod644="find . -type f -exec chmod 644 {} \;"
 alias chmod755="find . -type d -exec chmod 755 {} \;"
-alias chmod444="find . -type f -exec chmod 444 {} \;"
-
 
 # GIT-PROMPT
 if [[ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]]; then

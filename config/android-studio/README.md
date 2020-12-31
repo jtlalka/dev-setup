@@ -13,7 +13,7 @@
 
 
 ## Plugins
-- [.​ignore](https://plugins.jetbrains.com/plugin/7495--ignore/)
+- [.ignore](https://plugins.jetbrains.com/plugin/7495--ignore/)
 - [ADB Idea](https://plugins.jetbrains.com/plugin/7380-adb-idea/)
 - [Android Drawable Importer](https://plugins.jetbrains.com/plugin/7658-android-drawable-importer/)
 - [BashSupport](https://plugins.jetbrains.com/plugin/4230-bashsupport/)
@@ -28,4 +28,4 @@
 - colors
 - keymaps
 
-File: [android-studio-setup.zip](./android-studio-setup.zip)
+File: [android-studio-setup.zip](android-studio-setup.zip)
