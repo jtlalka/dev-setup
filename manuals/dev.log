@@ -11,7 +11,7 @@ route -p add 175.28.231.0  mask  255.255.255.0   175.28.239.254   METRIC 1 IF 20
 
 
 ==== Unix commands
-crl + R                     -- search for a previous command
+crl + R                      -- search for a previous command
 ls -la                       -- list file in directory
 cp <from> <to>               -- copy file
 mv <from> <to>               -- move file
@@ -29,18 +29,17 @@ ssh -vvv <user>@<host>:<port>     -- connect
 ps aux | grep gradle              -- list gradle processes
 kill -9 <gradle pid>              -- kill gradle process by pid
 gitlab-runner restart             -- restart CI runner
-sh  --login -i -- script.sh       -- run sh script from git bash
 
 
 ==== Brew commands
 brew list                    -- show list of packages
-brew cask list               -- show list of packages installed by Caskroom
+brew cask list               -- show list of packages installed by CaskRoom
 brew update                  -- update brew repository
 brew outdated                -- check for update packages
 brew upgrade <package>       -- update specific package
 
 
-==== Android commands
+==== ADB commands
 adb devices                  -- list of connected devices
 adb install <APK>            -- install application from PC
 adb uninstall <package>      -- uninstall all with package name
@@ -105,11 +104,14 @@ git pull                        -- get changes from remote branch to local branc
 git stash                       -- stash work for later
 git stash pop                   -- get changes from stash
 
+git tag <tag name>              -- create tag on current commit
+git tag -d <tag name>           -- remove tag from local
+
 git push                          -- send changes from local branch to remote branch
-git push <branch> --force         -- push force
+git push <branch> --force         -- push changes from local branch to remote branch
 git push -u origin <branch>       -- push branch to remote
 git push origin --delete <branch> -- remove remote branch
-git push origin <tag>             -- push single tag
+git push origin <tag>             -- push tag to remote
 git push origin --delete <tag>    -- remove tag from remote
 
 git rebase <branch>             -- update branch to changes from branch
@@ -118,7 +120,7 @@ git rebase --onto master HEAD~1 -- change root commit from current -1 to master
 git merge <branch name>         -- merge changes from local branch to current branch
 git diff <sourcebr> <targetbr>  -- preview changes before merging
 git cherry-pick <commit SHA>    -- duplicate commit from another branch to current branch
-git mergetool                   -- megre conflict tool
+git mergetool                   -- merge conflict tool
 
 gitk                            -- show information
 gitk --all                      -- show all information
@@ -127,7 +129,7 @@ git status                      -- show status of branch
 git log                         -- show list of changes
 git reflog                      -- show list of local changes
 
-Excample:
+Examples:
 git branch -r | grep <name>                         -- grep remote branch by name
 git branch | grep 'GATOR-' | xargs git branch -D    -- remove branches started from 'GATOR-'
 git branch --set-upstream-to=origin/<branch>        -- setup track a remote branch
@@ -140,8 +142,8 @@ git remote -v show                                  -- show my remote repository
 
 ==== Git configurations
 git config --list                             -- list of configuration
-git config --global user.name "<name>"        -- setup first name and last name
-git config --global user.email <email>        -- setup email
+git config --global user.name "<name>"        -- setup first and last name
+git config --global user.email <email>        -- setup email address
 git config --global push.default upstream     -- push the current branch to its upstream branch
 
 
@@ -183,9 +185,9 @@ cordova run <platform>                        -- run application on connected de
 
 ==== IntelliJ shortcuts
 General:
-- cmd + shift + A                  -- find action by name
-- alt + enter                      -- show context help
-- cmd + ,                          -- IDEA preferences
+- cmd + shift + A                  -- show actions popup
+- alt + enter                      -- show context help popup
+- cmd + ,                          -- application preferences
 - cmd + ;                          -- project preferences
 
 Navigation:
@@ -198,6 +200,7 @@ Navigation:
 - cmd + alt + B                    -- move to implementation
 - cmd + O                          -- open class
 - cmd + shift + O                  -- open file
+- cmd + alt + F7                   -- show usage
 - ctrl + H                         -- open hierarchy
 - ctrl + J                         -- open quick documentation
 - F2                               -- move to next error/warning
@@ -211,6 +214,9 @@ Navigation:
 - alt + space                      -- show method implementation
 - ctrl + alt + up/down             -- next/previous highlight usages
 - ctrl + shift + up/down           -- next/previous method in class
+- cmd + W                          -- close tab
+- cmd + shift + [                  -- move to left tab
+- cmd + shift + ]                  -- move to right tab
 
 Coding:
 - cmd + N                          -- generate new code
