@@ -1,10 +1,7 @@
-# Useful shortcuts on Mac
+### Mac
 
-#### Navigation
-- `cmd + space` - spotlight search
-
-#### Actions
-- `ctrl + F2` - move focus to top bar
-
-#### View
-- `ctrl + cmd + F` - start full screen mode
+Shortcuts:
+```
+cmd + space         -- show spotlight search
+ctrl + cmd + F      -- enter full screen mode
+```
