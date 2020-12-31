@@ -1,6 +1,6 @@
-# Android Studio
+### Android Studio
 
-## Custom shortcuts
+#### Custom shortcuts
 - `⌘⌥⌃ + O` -- Open recent
 - `⌘⌥⌃ + Q` -- Close project
 - `⌘⌥⌃ + S` -- Sync Project with Gradle
@@ -11,8 +11,7 @@
 - `⌘⌥⌃ + A` -- Annotation
 - `⌘⌥⌃ + T` -- Terminal
 
-
-## Plugins
+#### Plugins
 - [.ignore](https://plugins.jetbrains.com/plugin/7495--ignore/)
 - [ADB Idea](https://plugins.jetbrains.com/plugin/7380-adb-idea/)
 - [Android Drawable Importer](https://plugins.jetbrains.com/plugin/7658-android-drawable-importer/)
@@ -22,8 +21,7 @@
 - [Nyan Progress Bar](https://plugins.jetbrains.com/plugin/8575-nyan-progress-bar/)
 - [PlantUML integration](https://plugins.jetbrains.com/plugin/7017-plantuml-integration/)
 
-
-## Configuration
+#### Configuration
 - code style
 - colors
 - keymaps
