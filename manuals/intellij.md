@@ -34,8 +34,10 @@ alt + space                  -- show method implementation
 ctrl + alt + up/down         -- next/previous highlight usages
 ctrl + shift + up/down       -- next/previous method in class
 cmd + W                      -- close tab
-cmd + shift + [              -- move to left tab
-cmd + shift + ]              -- move to right tab
+cmd + [                      -- move to previous currsor position
+cmd + ]                      -- move to next currsor position
+cmd + shift + [              -- move to previous file (left tab)
+cmd + shift + ]              -- move to next file (right tab)
 ```
 
 Coding:

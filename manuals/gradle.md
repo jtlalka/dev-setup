@@ -16,3 +16,8 @@ gradle cleanEclipse          -- cleans all Eclipse files
 gradle dependencies          -- dependency tree for gradle project
 gradle :subProject:<task>    -- start task only for sub project
 ```
+
+Update Gradle wrapper:
+```
+./gradlew wrapper --gradle-version=X.Y.Z --distribution-type=all   -- update gradle wrapper library
+```

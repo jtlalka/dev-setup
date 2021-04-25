@@ -22,17 +22,18 @@ alias gb="git checkout -b"
 alias gf="git fetch -p"
 alias ga="git add ."
 alias gp="git pull"
+alias gd="git diff --stat"
 alias gl="git log --graph --oneline --all --decorate"
 alias git-clean="git branch | egrep -v '(master|develop|spike)' | xargs git branch -D"
 
-alias chmod444="find . -type f -exec chmod 444 {} \;"
 alias chmod644="find . -type f -exec chmod 644 {} \;"
 alias chmod755="find . -type d -exec chmod 755 {} \;"
+alias chmod444="find . -type f -exec chmod 444 {} \;"
 
 # APP ALIASES
 alias chrome="open -n -a 'Google Chrome' --args --profile-directory='Guest Profile'"
 
-# AUTOLOAD
+# COMPLITION
 autoload -Uz compinit && compinit
 
 # PROMPT
@@ -49,7 +50,6 @@ zstyle ':vcs_info:git:*' actionformats '%F{011}(%b|%a)%f %F{red}%u%f%F{green}%c%
 function setprompt {
     setopt PROMPT_SUBST
     export PROMPT_NLINE=$'\n'
-    # shellcheck disable=SC2034 disable=SC2016
     PROMPT='%F{166}${PWD/#$HOME/~}%f %F{031}[%n]%f ${vcs_info_msg_0_} $PROMPT_NLINE%F{166}▶%f '
 }
 

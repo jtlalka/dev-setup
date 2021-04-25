@@ -22,7 +22,8 @@ git checkout -- <file/dir>      -- undo changes in local files
 
 git commit -m "<text>"          -- commit changes with description
 git commit -am "<text>"         -- and commit changes with description
-git commit --amend              -- commit to last commit
+git commit --amend              -- add changes to last commit
+git commit --fixup HEAD         -- add commit associated to last commit
 
 git reset <file>                -- undo git add action file
 git reset --hard <commit>       -- reset branch to commit mark
@@ -72,6 +73,7 @@ git remote show origin                              -- show remote branch
 git log --graph --oneline --all --decorate          -- show graph tree of changes
 git mv -f <file> <new name/location>                -- rename or move file with tracking
 git remote -v show                                  -- show my remote repository
+git rebase -i --autosquash master                   -- interactive rebase which squash fixup commits
 ```
 
 Configuration:
