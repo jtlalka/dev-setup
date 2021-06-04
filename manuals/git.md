@@ -81,7 +81,7 @@ Configuration:
 git config --list                             -- list of configuration
 git config --global user.name "<name>"        -- setup first and last name
 git config --global user.email <email>        -- setup email address
-git config --global push.default upstream     -- push the current branch to its upstream branch
+git config --global push.default current      -- push the current branch to its upstream branch
 ```
 
 Commits:

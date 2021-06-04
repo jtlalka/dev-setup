@@ -16,5 +16,5 @@ chflags -R nouchg <path>     -- unlock files
 
 Shortcuts:
 ```
-crl + R                      -- search for a previous command
+ctrl + R                     -- search for a previous command
 ```

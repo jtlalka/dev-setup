@@ -4,6 +4,8 @@
 - `⌘⌥⌃ + O` -- Open recent
 - `⌘⌥⌃ + Q` -- Close project
 - `⌘⌥⌃ + S` -- Sync Project with Gradle
+- `⌘⌥⌃ + M` -- Select multiple devices...
+- `⌘⌥⌃ + V` -- Build variants
 - `⌘⌥⌃ + G` -- Build (G like Gradle)
 - `⌘⌥⌃ + D` -- Attach Debug
 - `⌘⌥⌃ + R` -- Rebuild project
