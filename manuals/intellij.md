@@ -12,8 +12,11 @@ Navigation:
 ```
 cmd + E                      -- show recent files
 cmd + L                      -- move cursor to line
-cmd + [                      -- move cursor back
-cmd + ]                      -- move cursor forth
+cmd + [                      -- move to previous currsor position
+cmd + ]                      -- move to next currsor position
+cmd + shift + [              -- move to previous file (left tab)
+cmd + shift + ]              -- move to next file (right tab)
+cmd + W                      -- close tab
 cmd + U                      -- move to super method
 cmd + B                      -- move to declaration
 cmd + alt + B                -- move to implementation
@@ -33,11 +36,8 @@ cmd + down                   -- move to selected file (project)
 alt + space                  -- show method implementation
 ctrl + alt + up/down         -- next/previous highlight usages
 ctrl + shift + up/down       -- next/previous method in class
-cmd + W                      -- close tab
-cmd + [                      -- move to previous currsor position
-cmd + ]                      -- move to next currsor position
-cmd + shift + [              -- move to previous file (left tab)
-cmd + shift + ]              -- move to next file (right tab)
+cmd + +                      -- expand all methods/files
+cmd + -                      -- collapse all methods/files
 ```
 
 Coding:
@@ -88,6 +88,6 @@ VCS:
 cmd + K                      -- show git console
 cmd + D                      -- show diff
 F7                           -- next change (diff)
-cmd + F7                     -- previous change (diff)
-cmd + alt + Z                -- undo uncommitted changes
+shift + F7                   -- previous change (diff)
+cmd + alt + Z                -- undo uncommitted changes on selected area
 ```

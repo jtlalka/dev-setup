@@ -3,13 +3,14 @@
 Personal development environment configuration and handy notes.
 
 #### Configuration
-- [Android Studio](config/android-studio)
+- [Android Studio](config/android-studio/readme.md)
 - [Bash profile](config/bash-profile/bash_profile.bash)
 - [ZSH profile](config/zsh-profile/zsh_profile.bash)
 
 #### Notes
 - [ADB](manuals/adb.md)
 - [Brew](manuals/brew.md)
+- [Chrome](manuals/chrome.md)
 - [Cordova](manuals/cordova.md)
 - [Eclipse](manuals/eclipse.md)
 - [Fitbit](manuals/fitbit.md)

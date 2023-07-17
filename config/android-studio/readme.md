@@ -1,23 +1,25 @@
 ### Android Studio
 
+#### IDE shortcuts
+- [Intellij & Android Studio](../../manuals/intellij.md)
+
 #### Custom shortcuts
 - `⌘⌥⌃ + O` -- Open recent
 - `⌘⌥⌃ + Q` -- Close project
 - `⌘⌥⌃ + S` -- Sync Project with Gradle
+- `⌘⌥⌃ + G` -- Execute Gradle Task
 - `⌘⌥⌃ + M` -- Select multiple devices...
 - `⌘⌥⌃ + V` -- Build variants
-- `⌘⌥⌃ + G` -- Build (G like Gradle)
+- `⌘⌥⌃ + B` -- Build project (Gradle logs)
 - `⌘⌥⌃ + D` -- Attach Debug
 - `⌘⌥⌃ + R` -- Rebuild project
-- `⌘⌥⌃ + B` -- Branches...
 - `⌘⌥⌃ + A` -- Annotation
 - `⌘⌥⌃ + T` -- Terminal
 
 #### Plugins
 - [.ignore](https://plugins.jetbrains.com/plugin/7495--ignore/)
 - [ADB Idea](https://plugins.jetbrains.com/plugin/7380-adb-idea/)
-- [Android Drawable Importer](https://plugins.jetbrains.com/plugin/7658-android-drawable-importer/)
-- [BashSupport](https://plugins.jetbrains.com/plugin/4230-bashsupport/)
+- [JSON To Kotlin Class](https://plugins.jetbrains.com/plugin/9960-json-to-kotlin-class-jsontokotlinclass-)
 - [Key Promoter X](https://plugins.jetbrains.com/plugin/9792-key-promoter-x/)
 - [Markdown Navigator](https://plugins.jetbrains.com/plugin/7896-markdown-navigator/)
 - [Nyan Progress Bar](https://plugins.jetbrains.com/plugin/8575-nyan-progress-bar/)
