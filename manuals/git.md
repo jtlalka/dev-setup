@@ -84,7 +84,7 @@ git config --global user.email <email>        -- setup email address
 git config --global push.default current      -- push the current branch to its upstream branch
 ```
 
-Commits:
+Commits prefixes:
 ```
 init(): initial changes for new project or repository
 build(): changes that affect the build system or external dependencies
@@ -95,4 +95,17 @@ refactor(): changes that neither fixes a bug nor adds a feature
 style(): changes that do not affect the meaning of the code
 test(): adding missing tests or correcting existing tests
 docs(): changes affected documentation only
+```
+
+Git command aliases:
+```
+alias gk="gitk --all"
+alias gs="git status -s"
+alias gb="git checkout -b"
+alias gf="git fetch -p"
+alias ga="git add ."
+alias gp="git pull"
+alias gd="git diff --stat"
+alias gl="git log --graph --oneline --all --decorate"
+alias git-clean="git branch | egrep -v '(master|develop|spike)' | xargs git branch -D"
 ```
