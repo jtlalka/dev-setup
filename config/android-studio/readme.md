@@ -6,14 +6,14 @@
 #### Custom shortcuts
 - `⌘⌥⌃ + O` -- Open recent
 - `⌘⌥⌃ + Q` -- Close project
-- `⌘⌥⌃ + S` -- Sync Project with Gradle
+- `⌘⌥⌃ + S` -- Sync Project with Gradle Files
 - `⌘⌥⌃ + G` -- Execute Gradle Task
 - `⌘⌥⌃ + M` -- Select multiple devices...
-- `⌘⌥⌃ + V` -- Build variants
-- `⌘⌥⌃ + B` -- Build project (Gradle logs)
-- `⌘⌥⌃ + D` -- Attach Debug
+- `⌘⌥⌃ + V` -- Select build variants...
+- `⌘⌥⌃ + B` -- Build (Gradle logs)
+- `⌘⌥⌃ + D` -- Attach Debugger to Android Process
 - `⌘⌥⌃ + R` -- Rebuild project
-- `⌘⌥⌃ + A` -- Annotation
+- `⌘⌥⌃ + A` -- Annotate (show git blame)
 - `⌘⌥⌃ + T` -- Terminal
 
 #### Plugins

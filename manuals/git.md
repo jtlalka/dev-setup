@@ -8,6 +8,7 @@ git init --bare                 -- create a new server repository
 
 git branch                      -- show my local branch
 git branch <branch>             -- create new branch
+git branch -m <branch>          -- rename branch
 git branch -D <branch>          -- delete current branch
 git branch -r                   -- show all remote branches
 git branch -vv                  -- show branch with remote
@@ -78,10 +79,11 @@ git rebase -i --autosquash master                   -- interactive rebase which 
 
 Configuration:
 ```
-git config --list                             -- list of configuration
-git config --global user.name "<name>"        -- setup first and last name
-git config --global user.email <email>        -- setup email address
-git config --global push.default current      -- push the current branch to its upstream branch
+git config --list                              -- list of configuration
+git config --global user.name "<name>"         -- setup first and last name
+git config --global user.email <email>         -- setup email address
+git config --global push.default current       -- push the current branch to its upstream branch
+git config --global init.defaultBranch <name>  -- change default branch name e.g. `main`
 ```
 
 Commits prefixes:
