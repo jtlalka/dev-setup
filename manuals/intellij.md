@@ -17,12 +17,14 @@ cmd + ]                      -- move to next currsor position
 cmd + shift + [              -- move to previous file (left tab)
 cmd + shift + ]              -- move to next file (right tab)
 cmd + W                      -- close tab
+shift + ESC                  -- close active window
 cmd + U                      -- move to super method
 cmd + B                      -- move to declaration
 cmd + alt + B                -- move to implementation
 cmd + O                      -- open class
 cmd + shift + O              -- open file
-cmd + alt + F7               -- show usage
+cmd + F7                     -- show usage in find window
+cmd + alt + F7               -- show usage in popup
 ctrl + H                     -- open hierarchy
 ctrl + J                     -- open quick documentation
 F2                           -- move to next error/warning
@@ -32,7 +34,7 @@ cmd + arrow up               -- show package path
 cmd + F12                    -- show class structure
 alt F1 -> 1                  -- show file in tree structure
 alt F1 -> 8                  -- open file in file explorer
-cmd + down                   -- move to selected file (project)
+cmd + down                   -- move to selected file
 alt + space                  -- show method implementation
 ctrl + alt + up/down         -- next/previous highlight usages
 ctrl + shift + up/down       -- next/previous method in class
@@ -53,12 +55,13 @@ cmd + shift + T              -- create test for class
 cmd + shift + up/down        -- move block up or down
 alt + shift + up/down        -- move line up or down
 alt + shift + left/right     -- marked text left or right
-cmd + shift + V              -- paste from content
+cmd + shift + V              -- paste from clipboard history
 ```
 
 Refactoring:
 ```
 ctrl + T                     -- refactor menu
+ctrl + O                     -- overade method
 cmd + alt + T                -- surround with..
 shift + F6                   -- rename property or class
 cmd + alt + L                -- format code

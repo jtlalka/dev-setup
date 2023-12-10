@@ -14,6 +14,7 @@
 - `⌘⌥⌃ + D` -- Attach Debugger to Android Process
 - `⌘⌥⌃ + R` -- Rebuild project
 - `⌘⌥⌃ + A` -- Annotate (show git blame)
+- `⌘⌥⌃ + L` -- Logcat
 - `⌘⌥⌃ + T` -- Terminal
 
 #### Plugins
