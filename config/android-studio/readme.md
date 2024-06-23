@@ -9,13 +9,13 @@
 - `⌘⌥⌃ + S` -- Sync Project with Gradle Files
 - `⌘⌥⌃ + G` -- Execute Gradle Task
 - `⌘⌥⌃ + M` -- Select multiple devices...
-- `⌘⌥⌃ + V` -- Select build variants...
-- `⌘⌥⌃ + B` -- Build (Gradle logs)
+- `⌘⌥⌃ + B` -- Build (Tool windows)
+- `⌘⌥⌃ + V` -- Build Variants (Tool windows)
 - `⌘⌥⌃ + D` -- Attach Debugger to Android Process
 - `⌘⌥⌃ + R` -- Rebuild project
 - `⌘⌥⌃ + A` -- Annotate (show git blame)
-- `⌘⌥⌃ + L` -- Logcat
-- `⌘⌥⌃ + T` -- Terminal
+- `⌘⌥⌃ + L` -- Logcat (Tool windows)
+- `⌘⌥⌃ + T` -- Terminal (Tool windows)
 
 #### Plugins
 - [.ignore](https://plugins.jetbrains.com/plugin/7495--ignore/)
@@ -27,8 +27,4 @@
 - [PlantUML integration](https://plugins.jetbrains.com/plugin/7017-plantuml-integration/)
 
 #### Configuration
-- code style
-- colors
-- keymaps
-
-File: [android-studio-setup.zip](android-studio-setup.zip)
+- [android-studio-keymaps.zip](android-studio-keymaps.zip)

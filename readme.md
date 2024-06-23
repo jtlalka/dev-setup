@@ -14,6 +14,7 @@ Personal development environment configuration and handy notes.
 - [Cordova](manuals/cordova.md)
 - [Eclipse](manuals/eclipse.md)
 - [Fitbit](manuals/fitbit.md)
+- [Fitbit](manuals/fleet.md)
 - [Git](manuals/git.md)
 - [Gradle](manuals/gradle.md)
 - [IntelliJ](manuals/intellij.md)
