@@ -37,6 +37,7 @@ git fetch -p                    -- update information about all remote branch
 git pull                        -- get changes from remote branch to local branch
 git stash                       -- stash work for later
 git stash pop                   -- get changes from stash
+git stash clear                 -- clear changes from stash
 
 git tag <tag name>              -- create tag on current commit
 git tag -d <tag name>           -- remove tag from local
