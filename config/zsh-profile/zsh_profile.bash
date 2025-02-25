@@ -6,8 +6,9 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export PATH="${PATH}:/Users/jtlalka/Library/Android/sdk/tools/"
 export PATH="${PATH}:/Users/jtlalka/Library/Android/sdk/platform-tools/"
 
-# ENV
-export ANDROID_HOME=/Users/jtlalka/Library/Android/sdk
+# ENV-FLAGS
+export LC_ALL=en_US.UTF-8
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 # ALIASES
 alias ll="ls -lG"
@@ -21,19 +22,22 @@ alias gs="git status -s ; git diff --stat HEAD | tail -n 1"
 alias gb="git checkout -b"
 alias gf="git fetch -p"
 alias ga="git add ."
-alias gc="git-cz commit"
 alias gd="git diff --stat"
-alias gl="git log --graph --oneline --all --decorate"
-alias git-main="git checkout master ; git pull"
+alias git-log="git log --graph --oneline --all --decorate"
+alias git-co="git checkout"
+alias git-cz="git-cz commit"
+alias git-main="git checkout main ; git pull"
 alias git-epic="git branch | grep epic -m1 | xargs git checkout ; git pull"
-alias git-clean="git branch | egrep -v '(master|develop|SPIKE)' | xargs git branch -D"
+alias git-clean="git branch | egrep -v '(master|develop|SPIKE)' | xargs git branch -D ; git gc"
 
 alias chmod644="find . -type f -exec chmod 644 {} \;"
 alias chmod755="find . -type d -exec chmod 755 {} \;"
 alias chmod444="find . -type f -exec chmod 444 {} \;"
 
-# APP ALIASES
-alias chrome="open -n -a 'Google Chrome' --args --profile-directory='Guest Profile'"
+alias adb-proxy-on="adb shell settings put global http_proxy"
+alias adb-proxy-off="adb shell settings put global http_proxy :0"
+alias adb-logcat="adb logcat -v time -s FA FA-SVC"
+alias adb-restart="adb kill-server ; adb start-server ; echo 'ADB Restart'"
 
 # COMPLITION
 autoload -Uz compinit && compinit
