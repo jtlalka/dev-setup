@@ -38,8 +38,8 @@ cmd + down                   -- move to selected file
 alt + space                  -- show method implementation
 ctrl + alt + up/down         -- next/previous highlight usages
 ctrl + shift + up/down       -- next/previous method in class
-cmd + +                      -- expand all methods/files
-cmd + -                      -- collapse all methods/files
+cmd + plus                   -- expand all methods/files
+cmd + minus                  -- collapse all methods/files
 ```
 
 Coding:
@@ -58,6 +58,16 @@ alt + shift + left/right     -- marked text left or right
 cmd + shift + V              -- paste from clipboard history
 ```
 
+Multiselection:
+```
+ctrl + G                     -- select next same phrase in file
+cmd + G                      -- jump next same phrase in file
+ctrl + cmd + G               -- select all same phrase in file
+ctrl + shift + G             -- undo last selected phrease
+alt + shift + click          -- add another cursor
+alt -> alt + up/down         -- duplicate cursor to next/previous line 
+```
+
 Refactoring:
 ```
 ctrl + T                     -- refactor menu
@@ -71,9 +81,6 @@ cmd + alt + M                -- extract to method
 cmd + shift + U              -- replace to upper case
 cmd + shift + F              -- find in path
 cmd + shift + R              -- replace in path
-alt -> alt + arrow           -- column selection
-ctrl + G                     -- select next same phrase
-ctrl + alt + G               -- select all same phrase
 ```
 
 Debugging:

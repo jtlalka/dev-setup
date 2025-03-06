@@ -56,12 +56,15 @@ git rebase --onto master HEAD~1 -- change root commit from current -1 to master
 git merge <branch name>         -- merge changes from local branch to current branch
 git diff <sourcebr> <targetbr>  -- preview changes before merging
 git cherry-pick <commit SHA>    -- duplicate commit from another branch to current branch
-git mergetool                   -- merge conflict tool
 
 git show                        -- show my changes
 git status                      -- show status of branch
 git log                         -- show list of changes
 git reflog                      -- show list of local changes
+
+git remote -v show              -- show my remote repository
+git remote set-url origin <SSH> -- update origin reposietory SSH
+git remote remove origin        -- remove remote origin repository
 
 gitk                            -- show commits of current branch
 gitk <branch name>              -- show commits of branch name
@@ -77,7 +80,6 @@ git checkout -b integration -t origin/integration   -- create local branch which
 git remote show origin                              -- show remote branch
 git log --graph --oneline --all --decorate          -- show graph tree of changes
 git mv -f <file> <new name/location>                -- rename or move file with tracking
-git remote -v show                                  -- show my remote repository
 git rebase -i --autosquash master                   -- interactive rebase which squash fixup commits
 ```
 
@@ -107,11 +109,14 @@ Git command aliases:
 ```
 alias gk="gitk --all"
 alias gs="git status -s"
+alias gc="git checkout"
 alias gb="git checkout -b"
 alias gf="git fetch -p"
 alias ga="git add ."
-alias gp="git pull"
-alias gd="git diff --stat"
-alias gl="git log --graph --oneline --all --decorate"
-alias git-clean="git branch | egrep -v '(master|develop|spike)' | xargs git branch -D"
+
+alias git-log="git log --graph --oneline --all --decorate"
+alias git-status="git status -s ; git diff --stat HEAD | tail -n 1"
+alias git-main="git checkout main ; git pull"
+alias git-epic="git branch | grep epic -m1 | xargs git checkout ; git pull"
+alias git-clean="git branch | egrep -v '(master|develop|SPIKE)' | xargs git branch -D ; git gc"
 ```

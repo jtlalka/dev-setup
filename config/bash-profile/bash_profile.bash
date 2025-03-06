@@ -15,10 +15,10 @@ alias du="du -sh"
 
 alias gk="gitk --all"
 alias gs="git status -s"
+alias gc="git checkout"
 alias gb="git checkout -b"
 alias gf="git fetch -p"
 alias ga="git add ."
-alias gp="git pull"
 
 alias chmod444="find . -type f -exec chmod 444 {} \;"
 alias chmod644="find . -type f -exec chmod 644 {} \;"

@@ -6,7 +6,10 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export PATH="${PATH}:/Users/jtlalka/Library/Android/sdk/tools/"
 export PATH="${PATH}:/Users/jtlalka/Library/Android/sdk/platform-tools/"
 
-# ENV-FLAGS
+# ENV (android)
+export ANDROID_HOME=/Users/jtlalka/Library/Android/sdk
+
+# ENV (brew)
 export LC_ALL=en_US.UTF-8
 export HOMEBREW_NO_AUTO_UPDATE=1
 
@@ -18,14 +21,15 @@ alias rmdir="rm -rdf"
 alias du="du -sh"
 
 alias gk="gitk --all"
-alias gs="git status -s ; git diff --stat HEAD | tail -n 1"
+alias gs="git status -s"
+alias gc="git checkout"
 alias gb="git checkout -b"
 alias gf="git fetch -p"
 alias ga="git add ."
-alias gd="git diff --stat"
-alias git-log="git log --graph --oneline --all --decorate"
-alias git-co="git checkout"
+
 alias git-cz="git-cz commit"
+alias git-log="git log --graph --oneline --all --decorate"
+alias git-status="git status -s ; git diff --stat HEAD | tail -n 1"
 alias git-main="git checkout main ; git pull"
 alias git-epic="git branch | grep epic -m1 | xargs git checkout ; git pull"
 alias git-clean="git branch | egrep -v '(master|develop|SPIKE)' | xargs git branch -D ; git gc"
